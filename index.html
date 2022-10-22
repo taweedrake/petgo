@@ -110,7 +110,7 @@
         <div class="z">
             <h4>Subscribe to our news letter</h4>
             <div class="email">
-                <input type="email" placeholder="Email Address">
+                <input type="email" id="email" placeholder="Email Address">
                 <button onclick="done()">SUBSCRIBE</button>
             </div>
         </div>
@@ -172,12 +172,21 @@
             <a href="">Privacy policy</a>
         </div>
     </footer>
-<script>
+
+      <script>
         function done(){
-            alert('Thank you for Subscribing to our news letter')
+            let email=document.getElementById('email');
+            if (email.value==''){
+                alert('Invalid email Address, Try Again with the correct Email')
+            }else{
+                alert('Thanks for subscribing to our news letter')
+                email.value='';
+            }
         }
 
     </script>
+      
+      
 
 </body>
 </html>
